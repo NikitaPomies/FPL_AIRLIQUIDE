@@ -1,0 +1,87 @@
+{
+    "parameters": {
+        "buildingCosts": {
+            "productionCenter": 800000.0,
+            "automationPenalty": 1200000.0,
+            "distributionCenter": 60000.0
+        },
+        "productionCosts": {
+            "productionCenter": 18.0,
+            "automationBonus": 3.4,
+            "distributionCenter": 2.0
+        },
+        "routingCosts": {
+            "primary": 0.0075,
+            "secondary": 0.11
+        },
+        "capacityCost": 1000.0,
+        "capacities": {
+            "productionCenter": 1250000,
+            "automationBonus": 1250000
+        }
+    },
+    "clients": [
+        {
+            "id": 1,
+            "demand": 40000,
+            "coordinates": [
+                44.841225,
+                -0.5800364
+            ]
+        },
+        {
+            "id": 2,
+            "demand": 20000,
+            "coordinates": [
+                43.2961743,
+                5.3699525
+            ]
+        },
+        {
+            "id": 3,
+            "demand": 50000,
+            "coordinates": [
+                50.6365654,
+                3.0635282
+            ]
+        }
+    ],
+    "sites": [
+        {
+            "id": 1,
+            "coordinates": [
+                48.8588897,
+                2.320041
+            ]
+        },
+        {
+            "id": 2,
+            "coordinates": [
+                45.7774551,
+                3.0819427
+            ]
+        }
+    ],
+    "siteSiteDistances": [
+        [
+            0.0,
+            352.586
+        ],
+        [
+            352.586,
+            0.0
+        ]
+    ],
+    "siteClientDistances": [
+        [
+            550.891,
+            704.129,
+            214.058
+        ],
+        [
+            420.28,
+            374.736,
+            539.535
+        ]
+    ]
+}

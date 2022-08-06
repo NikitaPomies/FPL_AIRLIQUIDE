@@ -1,0 +1,1 @@
+{"productionCenters": [{"id": 2, "automation": 0}], "distributionCenters": [{"id": 1, "parent": 2}], "clients": [{"id": 3, "parent": 1}, {"id": 1, "parent": 2}, {"id": 2, "parent": 2}]}
