@@ -49,7 +49,7 @@ nbclients(sol::Solution) = length(sol.clientsParents)
 nbsites(sol::Solution) = length(sol.isautomated)
 
 a_b = Inf
-print(a_b)
+
 
 
 

@@ -78,7 +78,7 @@ function optSolution(instance :: Instance; bigInstance = false :: Bool)
 
         
     """
-
+    print("tessssst")
     #Sets definition 
    
     S=[s for s in 1:nbsites(instance)]
