@@ -135,13 +135,15 @@ function perturbation(instance::Instance, current_sol::Solution)
         liste_func = [create_prodsite!, create_distribsite!, destroy_site!]
         for func in liste_func
             func(temp_sol, s)
-            affect_clients_to_nearest_sites!(instance, temp_sol)
             affect_distrib_to_nearest_prod_site!(instance, temp_sol)
+            affect_clients_to_nearest_sites!(instance, temp_sol)
             temp_cost = cost(temp_sol, instance)
             dObj = temp_cost - current_cost
             if dObj < 0
                 println(dObj)
                 current_cost = temp_cost
+                optflow!(temp_sol,S,I)
+
                 println(current_cost)
                 return temp_sol, true
             else
@@ -154,12 +156,15 @@ function perturbation(instance::Instance, current_sol::Solution)
             if s2 != s
 
                 swap!(temp_sol, s, s2)
-                affect_clients_to_nearest_sites!(instance, temp_sol)
                 affect_distrib_to_nearest_prod_site!(instance, temp_sol)
+                affect_clients_to_nearest_sites!(instance, temp_sol)
+                
                 temp_cost = cost(temp_sol, instance)
                 dObj = temp_cost - current_cost
                 if dObj < 0
                     current_cost = temp_cost
+                    optflow!(temp_sol,S,I)
+
                     print("swwaaaaap")
                     return temp_sol, true
                 else

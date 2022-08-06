@@ -79,7 +79,8 @@ function is_feasible(sol::Solution, instance::Instance)::Tuple{Bool,String}
             elseif !(1 <= distpar[s] <= S)
                 return false, "Distribution center without a valid parent"
             elseif !isprod[distpar[s]]
-                return false, "Distribution center whose parent is not a production center"
+                println(distpar[s])
+                return false, " Distribution center whose parent ( $(distpar[s])) is not a production center"
             end
         else
             if isauto[s]
