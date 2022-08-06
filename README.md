@@ -11,12 +11,12 @@ We then used JuMP to modelize the problem and CPLEX to solve it to optimum (than
 
 Here is a visualization of the optimum distribution network for the large instance : 
 
-![](/doc/visu_large.png)
+<p align="center">
+  <img src="doc/visu_large.png" />
+</p>
+
 
 All solutions are provided in [this folder](/sol/)
-
-
-
 
 
 
